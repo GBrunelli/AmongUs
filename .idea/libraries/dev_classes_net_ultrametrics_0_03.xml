@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="dev-classes_net.ultrametrics-0.03">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/libraries/jpcap-0.01.16-win32/jars/dev-classes_net.ultrametrics-0.03.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/java/libraries/jpcap-0.01.16-win32/jars/fooware_CommandLine-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/java/libraries/jpcap-0.01.16-win32/jars/net.sourceforge.jpcap-0.01.16.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/main/java/libraries/jpcap-0.01.16-win32/jars/javadoc_net.sourceforge.jpcap-0.01.16.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/libraries/jpcap-0.01.16-win32/jars/net.sourceforge.jpcap-0.01.16.jar!/" />
+    </SOURCES>
+  </library>
+</component>
