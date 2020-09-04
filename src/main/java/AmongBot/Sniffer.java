@@ -15,12 +15,14 @@ public class Sniffer {
      * Constructor
      * */
     public Sniffer(String device) throws Exception {
-        // Initialize jpcap
+
         PacketCapture packetCapture = new PacketCapture();
+
         System.out.println("Using device '" + device + "'");
+
         packetCapture.open(device, true);
         packetCapture.setFilter(FILTER, true);
-        packetCapture.addPacketListener(new PacketHandler());
+        packetCapture.addPacketListener(new GamePacketHandler());
 
         System.out.println("Capturing packets...");
         packetCapture.capture(PACKET_COUNT);
@@ -32,14 +34,16 @@ public class Sniffer {
                 Sniffer sniffer = new Sniffer(args[0]);
             }
             else {
-                System.out.println("Usage: java Sniffer [device name]");
                 System.out.println("Available network devices on your machine:");
                 String[] devices = PacketCapture.lookupDevices();
 
-                for (String dev : devices) System.out.println("\t" + dev);
+                for (String dev : devices) {
+                    System.out.println("Device :\t" + dev);
+                }
             }
         } catch (Exception e) {
             System.out.println(e.toString());
+            System.exit(1);
         }
     }
 }

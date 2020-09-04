@@ -28,17 +28,20 @@ public class Bot {
         // TODO: unify these lines
         jda.addEventListener(new Clear(), new Info(), new Mute(), new Start());
 
+        // TEST
+        {
+            try {
+                GlobalScreen.registerNativeHook();
+            } catch (NativeHookException e) {
+                e.printStackTrace();
+                System.exit(1);
+            }
 
-        try {
-            GlobalScreen.registerNativeHook();
-        } catch (NativeHookException e) {
-            e.printStackTrace();
-            System.exit(1);
+            Capture capture = new Capture();
+
+            GlobalScreen.addNativeKeyListener(capture);
         }
 
-        Capture capture = new Capture();
-
-        GlobalScreen.addNativeKeyListener(capture);
     }
 
 }
