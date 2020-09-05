@@ -4,6 +4,9 @@ import Commands.Mute;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 
+/**
+ * TEST CLASS
+ * */
 public class Capture implements NativeKeyListener {
 
     @Override

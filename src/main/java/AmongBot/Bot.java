@@ -9,8 +9,6 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
-import org.jnativehook.GlobalScreen;
-import org.jnativehook.NativeHookException;
 
 import javax.security.auth.login.LoginException;
 
@@ -28,7 +26,9 @@ public class Bot {
         // TODO: unify these lines
         jda.addEventListener(new Clear(), new Info(), new Mute(), new Start());
 
-        // TEST
+
+
+        /*/ TEST
         {
             try {
                 GlobalScreen.registerNativeHook();
@@ -40,7 +40,7 @@ public class Bot {
             Capture capture = new Capture();
 
             GlobalScreen.addNativeKeyListener(capture);
-        }
+        }*/
 
     }
 

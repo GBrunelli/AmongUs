@@ -26,6 +26,7 @@ public class Sniffer {
 
         System.out.println("Capturing packets...");
         packetCapture.capture(PACKET_COUNT);
+
     }
 
     public static void main(String[] args) {
