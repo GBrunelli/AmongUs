@@ -29,6 +29,4 @@ class GamePacketHandler implements PacketListener {
             e.printStackTrace();
         }
     }
-
-
 }

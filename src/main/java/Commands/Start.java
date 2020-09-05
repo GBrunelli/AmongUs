@@ -16,8 +16,9 @@ public class Start extends Command {
                 event.getChannel().sendMessage("Incorrect commands usage.").queue();
             }
 
-            Bot.serverId = args[1];
             Mute.cEvent = event;
+            Bot.serverID = args[1];
+
             /*
             *
             * connect with server

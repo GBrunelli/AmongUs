@@ -33,14 +33,20 @@ public class PacketAnalyzer {
             // DEBUGGING TOOL
             String srcHost = udpPacket.getSourceAddress();
             String dstHost = udpPacket.getDestinationAddress();
+            // DEBUGGING TOOL
 
             if (isIpPacket(data)) {
-                // DEBUGGING TOOL
-                String ip;
-                ip = Byte.toUnsignedInt(data[5]) + "." + Byte.toUnsignedInt(data[6]) + "." +
-                        Byte.toUnsignedInt(data[7]) + "." + Byte.toUnsignedInt(data[8]);
 
+                String ip;
+                ip = Byte.toUnsignedInt(data[6]) + "." + Byte.toUnsignedInt(data[7]) + "." +
+                        Byte.toUnsignedInt(data[8]) + "." + Byte.toUnsignedInt(data[9]);
+
+                // DEBUGGING TOOL
                 System.out.println(srcHost + " -> " + dstHost + ": SERVER IP = " + ip + "\n");
+                // DEBUGGING TOOL
+
+                Bot.serverIP = ip;
+
             }
             return MATCHMAKING_PACKET;
         }
@@ -54,5 +60,4 @@ public class PacketAnalyzer {
         }
         return false;
     }
-
 }
