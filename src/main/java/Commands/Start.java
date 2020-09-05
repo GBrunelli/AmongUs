@@ -21,7 +21,7 @@ public class Start extends Command {
 
             /*
             *
-            * connect with server
+            * TODO: connect with server
             *
             */
 
