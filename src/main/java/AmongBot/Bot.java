@@ -19,7 +19,7 @@ public class Bot {
     public static String serverIP;
 
     public static void main(String[] args) throws LoginException {
-        jda = new JDABuilder(AccountType.BOT).setToken("NzQ5Nzk3MDY1MTkzOTQ3MzE4.X0xM7g._PAcOQJzZawb2mYphPVsFf34qHo").build();
+        jda = new JDABuilder(AccountType.BOT).setToken("").build();
 
         jda.getPresence().setStatus(OnlineStatus.ONLINE);
 
